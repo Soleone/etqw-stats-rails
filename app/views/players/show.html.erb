@@ -1,0 +1,9 @@
+<p>
+  <b>Name:</b>
+  <%=h @player.name %><br/>
+  Joined on <%= @player.created_at.to_s(:basic_en) %>
+</p>
+
+
+<%= link_to 'View all my downloaded instances', player_instances_path(@player) %> | 
+<%= link_to 'Update my statistics', new_player_instance_path(@player) %>

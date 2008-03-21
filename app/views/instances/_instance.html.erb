@@ -1,0 +1,26 @@
+<% info = stats.user_info %>
+<% totals = stats.totals %>
+
+
+<%= link_to 'Delete', player_instance_path(@player, id), :method => 'delete' %> | 
+<%= link_to stats.user_info.updated_at.to_s(:basic_de), player_instance_path(@player, id) %>
+<ul>
+	<li>
+		<b>Rank:</b> <%= info.rank %>
+	</li>
+	<li>
+		<b>Time Played:</b> <%= totals.time_played / 60 /60 %> hours
+	</li>
+	<li>
+		<b>Kills:</b> <%= totals.kills %>
+	</li>
+	<li>
+		<b>Deaths:</b> <%= totals.deaths%>
+	</li>
+	<li>
+		<b>Total XP:</b> <%= "%0.0f" % totals.xp %>
+	</li>
+	<li>
+		<b>Accuracy:</b> <%= "%0.2f" % totals.accuracy %> %
+	</li>
+</ul>

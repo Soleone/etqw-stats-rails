@@ -1,0 +1,13 @@
+<h1>Listing instances</h1>
+
+<ol>
+<% @stats.each do |id, stat| %>
+	<li><%= render :partial => 'instance', :locals => {:id => id, :stats => stat}%></li>
+<% end %>
+</ol>
+<br />
+
+<%= link_to 'Go back to your main page', player_path(@player) %> | 
+<%= link_to 'Update my status', new_player_instance_path(@player) %> |
+<%= link_to 'Import from file...', '' %>
+

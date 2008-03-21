@@ -1,0 +1,12 @@
+<h1>Editing instance</h1>
+
+<%= error_messages_for :instance %>
+
+<% form_for(@instance) do |f| %>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @instance %> |
+<%= link_to 'Back', instances_path %>
